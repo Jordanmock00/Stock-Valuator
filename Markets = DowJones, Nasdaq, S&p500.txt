@@ -1,0 +1,38 @@
+from gtts import gTTS
+import os
+import webbrowser	
+        
+        #stock price and share numbers are artificial , created at random for this project. 
+class Stock:
+    def __init__(self, Shares, Cp, Estv):
+        self.Shares = Shares
+        self.Cp = Cp
+        self.Estv = Estv
+        
+
+
+
+JpMorgan  = Stock(87465.00, 352.45, 352.45)
+Disney = Stock(32125.00, 546.00, 32125.00 / 564.00)
+Apple  = Stock(87465.00, 352.45, 87465.00 / 352.45)
+IBM  = Stock(87465.00, 352.45, 87465.00 / 352.45)
+AB  = Stock(87465.00, 352.45, 87465.00 / 352.45)
+Apple  = Stock(87465.00, 352.45, 87465.00 / 352.45) 
+CocaCola = Stock(54563.00, 452.00, 54563.00 / 452.00)
+AdvanceAutoParts = Stock(38462.00, 45.33, 38462.00 / 45.33)
+AFLACInc = Stock(14785.00, 258.00, 14785.00 / 258.00)
+enter = ".MainMenu, commands, markets"
+MainMenu = "formulas, commands, markets"
+formulas = "number of shares / stock price"
+commands = " current price-print(Stockname.CurrentPrice) , for number of shares-print(Stockname.Shares) stock $value-print(Stockname.EstV)"
+markets = " DowJones, S&p500"
+DowJones = "mmm", "American Express", "Apple", "Boeing", "Catepillar", "Chevron", "Ciso", "CocaCola", "Disney", "IBM", "JPMorgan"
+SNP500 = "AbbottLaboratories = AB ", "AbbVie Inc", "ABIOMEDInc", "Adobe Inc", "AdvancedMicroDevicesInc", "AdvanceAutoParts", "AES" "Corp", "AFLAC Inc"
+print("type enter")
+tts=gTTS(text="hello and welcome to your stock valuator made by Jordan Mock ... this is a program that incorporates warren buffet's stock valuation algorythm ...   pleas type enter below.",lang="en")
+tts.save("welcome.mp3")
+os.system("welcome.mp3")
+url = "https://money.cnn.com/data/markets/" 
+webbrowser.open(url)  
+
+       
